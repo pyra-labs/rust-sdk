@@ -4,7 +4,7 @@
   <h1 style="margin-top:20px;">Pyra Rust SDK</h1>
 </div>
 
-Rust SDK for interacting with the Pyra protocol.
+Rust SDK for interacting with the Pyra protocol. The SDK is split across multiple Rust crates.
 
 ## Links
 
