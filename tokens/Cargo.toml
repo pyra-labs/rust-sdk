@@ -1,0 +1,17 @@
+[package]
+name = "pyra-tokens"
+description = "Token definitions for supported assets on Pyra"
+readme = "README.md"
+version = { workspace = true }
+edition = { workspace = true }
+authors = { workspace = true }
+license = { workspace = true }
+repository = { workspace = true }
+keywords = { workspace = true }
+categories = { workspace = true }
+
+[dependencies]
+solana-program = { workspace = true }
+spl-token = { workspace = true }
+spl-token-2022 = { workspace = true }
+pythnet-sdk = { workspace = true }
