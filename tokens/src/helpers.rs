@@ -12,7 +12,7 @@ macro_rules! feed_id {
             }
         }
 
-        const fn parse_feed_id(hex: &str) -> FeedId {
+        const fn parse_feed_id(hex: &str) -> PythFeedId {
             let hex_bytes = hex.as_bytes();
             let (start_offset, expected_len) =
                 if hex_bytes.len() == 66 && hex_bytes[0] == b'0' && hex_bytes[1] == b'x' {
@@ -39,7 +39,7 @@ macro_rules! feed_id {
         }
 
         const HEX: &str = $hex;
-        const RESULT: FeedId = parse_feed_id(HEX);
+        const RESULT: PythFeedId = parse_feed_id(HEX);
         RESULT
     }};
 }

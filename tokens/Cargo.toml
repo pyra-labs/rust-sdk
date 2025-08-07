@@ -14,4 +14,3 @@ categories = { workspace = true }
 solana-program = { workspace = true }
 spl-token = { workspace = true }
 spl-token-2022 = { workspace = true }
-pythnet-sdk = { workspace = true }
