@@ -8,12 +8,13 @@
 //! }
 //! ```
 
-use pythnet_sdk::messages::FeedId;
 use solana_program::{pubkey, pubkey::Pubkey};
-use spl_token::ID as TOKEN_PROGRAM_ID;
-pub use spl_token_2022::ID as TOKEN_2022_PROGRAM_ID;
 
 mod helpers;
+
+pub type PythFeedId = [u8; 32];
+const TOKEN_PROGRAM_ID: Pubkey = pubkey!("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA");
+const TOKEN_2022_PROGRAM_ID: Pubkey = pubkey!("TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb");
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub struct Token {
@@ -22,8 +23,8 @@ pub struct Token {
     pub mint: Pubkey,
     pub token_program: Pubkey,
     pub decimals: u8,
-    pub pyth_price_feed: Option<FeedId>,
-    pub spendable: bool,
+    pub pyth_price_feed: Option<PythFeedId>,
+    pub spendable: bool, // Only USD stablecoins with 6 decimals are spendable
 }
 
 pub const SUPPORTED_TOKENS: [Token; 14] = [
