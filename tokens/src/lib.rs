@@ -8,7 +8,7 @@
 //! }
 //! ```
 
-use solana_program::{pubkey, pubkey::Pubkey};
+use solana_pubkey::{pubkey, Pubkey};
 
 mod helpers;
 

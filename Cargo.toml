@@ -3,7 +3,7 @@ members = ["tokens"]
 resolver = "2"
 
 [workspace.package]
-version = "0.2.1"
+version = "0.2.2"
 edition = "2021"
 authors = ["Iarla Crewe <iarla@pyra.fi>"]
 license = "MIT"
@@ -13,4 +13,4 @@ categories = ["api-bindings", "cryptography::cryptocurrencies"]
 
 [workspace.dependencies]
 # Solana
-solana-program = "2.1.0"
+solana-pubkey = "2.4.0"
