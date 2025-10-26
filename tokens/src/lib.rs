@@ -16,6 +16,8 @@ pub type PythFeedId = [u8; 32];
 const TOKEN_PROGRAM_ID: Pubkey = pubkey!("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA");
 const TOKEN_2022_PROGRAM_ID: Pubkey = pubkey!("TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb");
 
+pub const PYRA_PROGRAM_ID: Pubkey = pubkey!("6JjHXLheGSNvvexgzMthEcgjkcirDrGduc3HAKB2P1v2");
+
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub struct Token {
     pub name: &'static str,
