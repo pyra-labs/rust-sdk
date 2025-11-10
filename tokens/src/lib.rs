@@ -10,7 +10,7 @@
 
 use solana_pubkey::{pubkey, Pubkey};
 
-mod helpers;
+mod macros;
 
 pub type PythFeedId = [u8; 32];
 
@@ -18,6 +18,12 @@ const TOKEN_PROGRAM_ID: Pubkey = pubkey!("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623
 const TOKEN_2022_PROGRAM_ID: Pubkey = pubkey!("TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb");
 
 pub const PYRA_PROGRAM_ID: Pubkey = pubkey!("6JjHXLheGSNvvexgzMthEcgjkcirDrGduc3HAKB2P1v2");
+
+pub const USDC: Token = SUPPORTED_TOKENS[0];
+pub const MARKET_INDEX_USDC: u16 = USDC.drift_market_index;
+
+pub const WSOL: Token = SUPPORTED_TOKENS[1];
+pub const MARKET_INDEX_WSOL: u16 = WSOL.drift_market_index;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub struct Token {
@@ -30,18 +36,19 @@ pub struct Token {
     pub is_usd_stablecoin: bool,
 }
 
+impl Token {
+    pub fn find_by_drift_market_index(drift_market_index: u16) -> Option<&'static Self> {
+        SUPPORTED_TOKENS
+            .iter()
+            .find(|token| token.drift_market_index == drift_market_index)
+    }
+
+    pub fn find_by_mint(mint: &Pubkey) -> Option<&'static Self> {
+        SUPPORTED_TOKENS.iter().find(|token| token.mint == *mint)
+    }
+}
+
 pub const SUPPORTED_TOKENS: [Token; 13] = [
-    Token {
-        name: "wSOL",
-        drift_market_index: 1,
-        mint: pubkey!("So11111111111111111111111111111111111111112"),
-        token_program: TOKEN_PROGRAM_ID,
-        decimals: 9,
-        pyth_price_feed: feed_id!(
-            "0xef0d8b6fda2ceba41da15d4095d1da392a0d2f8ed0c6c7bc0f4cfac8c280b56d"
-        ),
-        is_usd_stablecoin: false,
-    },
     Token {
         name: "USDC",
         drift_market_index: 0,
@@ -52,6 +59,17 @@ pub const SUPPORTED_TOKENS: [Token; 13] = [
             "0xeaa020c61cc479712813461ce153894a96a6c00b21ed0cfc2798d1f9a9e9c94a"
         ),
         is_usd_stablecoin: true,
+    },
+    Token {
+        name: "wSOL",
+        drift_market_index: 1,
+        mint: pubkey!("So11111111111111111111111111111111111111112"),
+        token_program: TOKEN_PROGRAM_ID,
+        decimals: 9,
+        pyth_price_feed: feed_id!(
+            "0xef0d8b6fda2ceba41da15d4095d1da392a0d2f8ed0c6c7bc0f4cfac8c280b56d"
+        ),
+        is_usd_stablecoin: false,
     },
     Token {
         name: "USDT",
@@ -175,15 +193,3 @@ pub const SUPPORTED_TOKENS: [Token; 13] = [
         is_usd_stablecoin: false,
     },
 ];
-
-impl Token {
-    pub fn find_by_drift_market_index(drift_market_index: u16) -> Option<&'static Token> {
-        SUPPORTED_TOKENS
-            .iter()
-            .find(|token| token.drift_market_index == drift_market_index)
-    }
-
-    pub fn find_by_mint(mint: &Pubkey) -> Option<&'static Token> {
-        SUPPORTED_TOKENS.iter().find(|token| token.mint == *mint)
-    }
-}
