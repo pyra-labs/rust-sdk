@@ -1,13 +1,3 @@
-//! Token definitions for the Pyra Solana smart contract ecosystem.
-//!
-//! ```rust
-//! use pyra_tokens::{Token, SUPPORTED_TOKENS};
-//!
-//! if let Some(token) = Token::find_by_market_index(0) {
-//!     println!("USDC mint: {}", token.mint);
-//! }
-//! ```
-
 use solana_pubkey::{pubkey, Pubkey};
 
 mod macros;

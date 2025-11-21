@@ -1,0 +1,18 @@
+[package]
+name = "pyra-accounts"
+description = "Account definitions and PDA helpers for accounts on Pyra"
+readme = "README.md"
+version = { workspace = true }
+edition = { workspace = true }
+authors = { workspace = true }
+license = { workspace = true }
+repository = { workspace = true }
+keywords = { workspace = true }
+categories = { workspace = true }
+
+[dependencies]
+solana-program = { workspace = true }
+solana-pubkey = { workspace = true }
+
+[dev-dependencies]
+pyra-tokens = { path = "../tokens" }
