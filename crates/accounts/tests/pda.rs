@@ -6,7 +6,7 @@ const OWNER: Pubkey = pubkey!("5DXPwzc9VurVGVZfpet9bbaL7XQvFSVz5AKQo7z11r4");
 
 #[test]
 fn test_get_vault() {
-    let vault = get_vault(OWNER);
+    let vault = get_vault(&OWNER);
     assert_eq!(
         vault,
         pubkey!("75eLjyjszgrpqqL4udoyyRS57J1m6zKqSQ5EUm4Dgrjf")
@@ -15,7 +15,7 @@ fn test_get_vault() {
 
 #[test]
 fn test_get_deposit_address() {
-    let deposit_address = get_deposit_address(OWNER);
+    let deposit_address = get_deposit_address(&OWNER);
     assert_eq!(
         deposit_address,
         pubkey!("HkpWHP7wuF6wYKKPEgNk35mL5hoG4LStfcFRnU4ur2oz")
@@ -34,14 +34,14 @@ fn test_get_send_hold() {
 #[test]
 fn test_get_swap_ledger() {
     // USDC
-    let swap_ledger = get_swap_ledger(SUPPORTED_TOKENS[0].mint);
+    let swap_ledger = get_swap_ledger(&SUPPORTED_TOKENS[0].mint);
     assert_eq!(
         swap_ledger,
         pubkey!("5TkaghhdPNyNjJ6ucyFik25dWPgNx4SNzMZ9MShDJ7qu")
     );
 
     // wSOL
-    let swap_ledger = get_swap_ledger(SUPPORTED_TOKENS[1].mint);
+    let swap_ledger = get_swap_ledger(&SUPPORTED_TOKENS[1].mint);
     assert_eq!(
         swap_ledger,
         pubkey!("7EGL54SwicuLda36Pjg7ih5pBCj6gG7MAHDgJyizAvH3")
@@ -50,7 +50,7 @@ fn test_get_swap_ledger() {
 
 #[test]
 fn test_get_drift_user() {
-    let drift_user = get_drift_user(OWNER, 0);
+    let drift_user = get_drift_user(&OWNER, 0);
     assert_eq!(
         drift_user,
         pubkey!("4fmAhVBhpQdbSc9SLhHvxxYRoxfWw9s2fUZq44vyfFTg")
@@ -59,7 +59,7 @@ fn test_get_drift_user() {
 
 #[test]
 fn test_get_drift_user_stats() {
-    let drift_user_stats = get_drift_user_stats(OWNER);
+    let drift_user_stats = get_drift_user_stats(&OWNER);
     assert_eq!(
         drift_user_stats,
         pubkey!("5ZLpBrU2z3QL4CgZxmyYg8Zv8skJ82gP2v27fprMdcJs")

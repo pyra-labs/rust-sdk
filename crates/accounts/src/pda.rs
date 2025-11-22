@@ -2,12 +2,12 @@ use solana_program::pubkey::Pubkey;
 
 use crate::{DRIFT_PROGRAM_ID, PYRA_PROGRAM_ID};
 
-pub fn get_vault(owner: Pubkey) -> Pubkey {
+pub fn get_vault(owner: &Pubkey) -> Pubkey {
     let (pubkey, _) = Pubkey::find_program_address(&[b"vault", owner.as_ref()], &PYRA_PROGRAM_ID);
     pubkey
 }
 
-pub fn get_deposit_address(owner: Pubkey) -> Pubkey {
+pub fn get_deposit_address(owner: &Pubkey) -> Pubkey {
     let vault = get_vault(owner);
     let (pubkey, _) =
         Pubkey::find_program_address(&[b"deposit_address", vault.as_ref()], &PYRA_PROGRAM_ID);
@@ -19,13 +19,13 @@ pub fn get_spend_hold() -> Pubkey {
     pubkey
 }
 
-pub fn get_swap_ledger(mint: Pubkey) -> Pubkey {
+pub fn get_swap_ledger(mint: &Pubkey) -> Pubkey {
     let (pubkey, _) =
         Pubkey::find_program_address(&[b"swap_ledger", mint.as_ref()], &PYRA_PROGRAM_ID);
     pubkey
 }
 
-pub fn get_drift_user(owner: Pubkey, sub_account_id: u16) -> Pubkey {
+pub fn get_drift_user(owner: &Pubkey, sub_account_id: u16) -> Pubkey {
     let vault = get_vault(owner);
     let (pubkey, _) = Pubkey::find_program_address(
         &[
@@ -38,7 +38,7 @@ pub fn get_drift_user(owner: Pubkey, sub_account_id: u16) -> Pubkey {
     pubkey
 }
 
-pub fn get_drift_user_stats(owner: Pubkey) -> Pubkey {
+pub fn get_drift_user_stats(owner: &Pubkey) -> Pubkey {
     let vault = get_vault(owner);
     let (pubkey, _) =
         Pubkey::find_program_address(&[b"user_stats", vault.as_ref()], &DRIFT_PROGRAM_ID);
