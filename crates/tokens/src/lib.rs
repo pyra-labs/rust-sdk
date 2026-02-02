@@ -189,7 +189,7 @@ pub const SUPPORTED_TOKENS: [Token; 14] = [
         token_program: TOKEN_PROGRAM_ID,
         decimals: 6,
         pyth_price_feed: feed_id!(
-            "0xe616297dab48626eaacf6d030717b25823b13ae6520b83f4735bf8deec8e2c9a"
+            "0x2ad31d1c4a85fbf2156ce57fab4104124c5ef76a6386375ecfc8da1ed5ce1486"
         ),
         is_usd_stablecoin: false,
     },
