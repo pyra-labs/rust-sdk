@@ -38,7 +38,7 @@ impl Token {
     }
 }
 
-pub const SUPPORTED_TOKENS: [Token; 13] = [
+pub const SUPPORTED_TOKENS: [Token; 14] = [
     Token {
         name: "USDC",
         drift_market_index: 0,
@@ -179,6 +179,17 @@ pub const SUPPORTED_TOKENS: [Token; 13] = [
         decimals: 8,
         pyth_price_feed: feed_id!(
             "0x9d4294bbcd1174d6f2003ec365831e64cc31d9f6f15a2b85399db8d5000960f6"
+        ),
+        is_usd_stablecoin: false,
+    },
+    Token {
+        name: "syrupUSDC",
+        drift_market_index: 57,
+        mint: pubkey!("AvZZF1YaZDziPY2RCK4oJrRVrbN3mTD9NL24hPeaZeUj"),
+        token_program: TOKEN_PROGRAM_ID,
+        decimals: 6,
+        pyth_price_feed: feed_id!(
+            "0xe616297dab48626eaacf6d030717b25823b13ae6520b83f4735bf8deec8e2c9a"
         ),
         is_usd_stablecoin: false,
     },

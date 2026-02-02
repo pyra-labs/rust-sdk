@@ -655,7 +655,7 @@ dependencies = [
 
 [[package]]
 name = "pyra-accounts"
-version = "0.2.8"
+version = "0.2.9"
 dependencies = [
  "pyra-tokens",
  "solana-program",
@@ -664,7 +664,7 @@ dependencies = [
 
 [[package]]
 name = "pyra-tokens"
-version = "0.2.8"
+version = "0.2.9"
 dependencies = [
  "solana-pubkey",
 ]
