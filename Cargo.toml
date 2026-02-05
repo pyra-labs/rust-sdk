@@ -3,7 +3,7 @@ members = ["crates/*"]
 resolver = "2"
 
 [workspace.package]
-version = "0.2.11"
+version = "0.2.11" # Update workspace dependencies below too
 edition = "2021"
 authors = ["Iarla Crewe <iarla@pyra.fi>"]
 license = "MIT"
@@ -16,3 +16,5 @@ solana-pubkey = "^2.2.0"
 solana-program = "^2.2.0"
 borsh = "1"
 anchor-lang = "0.31.1"
+pyra-accounts = { path = "crates/accounts", version = "0.2.11" }
+pyra-tokens = { path = "crates/tokens", version = "0.2.11" }
