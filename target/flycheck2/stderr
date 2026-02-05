@@ -1,0 +1,174 @@
+    Blocking waiting for file lock on package cache
+   0.191285333s  INFO prepare_target{force=false package_id=pyra-accounts v0.2.11 (/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/crates/accounts) target="pyra_accounts"}: cargo::core::compiler::fingerprint: fingerprint error for pyra-accounts v0.2.11 (/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/crates/accounts)/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("pyra_accounts", ["lib"], "/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/crates/accounts/src/lib.rs", Edition2021) }
+   0.191436833s  INFO prepare_target{force=false package_id=pyra-accounts v0.2.11 (/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/crates/accounts) target="pyra_accounts"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/target/debug/.fingerprint/pyra-accounts-a7c9ee6ee100d9b6/lib-pyra_accounts`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+   0.228054625s  INFO prepare_target{force=false package_id=pyra-accounts v0.2.11 (/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/crates/accounts) target="pyra_accounts"}: cargo::core::compiler::fingerprint: fingerprint error for pyra-accounts v0.2.11 (/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/crates/accounts)/Check { test: true }/TargetInner { name_inferred: true, ..: lib_target("pyra_accounts", ["lib"], "/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/crates/accounts/src/lib.rs", Edition2021) }
+   0.228064542s  INFO prepare_target{force=false package_id=pyra-accounts v0.2.11 (/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/crates/accounts) target="pyra_accounts"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/target/debug/.fingerprint/pyra-accounts-4b1b62b20a851929/test-lib-pyra_accounts`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+   0.228450875s  INFO prepare_target{force=false package_id=pyra-tokens v0.2.11 (/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/crates/tokens) target="pyra_tokens"}: cargo::core::compiler::fingerprint: fingerprint error for pyra-tokens v0.2.11 (/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/crates/tokens)/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("pyra_tokens", ["lib"], "/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/crates/tokens/src/lib.rs", Edition2021) }
+   0.228454417s  INFO prepare_target{force=false package_id=pyra-tokens v0.2.11 (/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/crates/tokens) target="pyra_tokens"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/target/debug/.fingerprint/pyra-tokens-f61ae437e373928e/lib-pyra_tokens`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   8: cargo::ops::cargo_compile::compile_ws
+   9: cargo::ops::cargo_compile::compile_with_exec
+  10: cargo::ops::cargo_compile::compile
+  11: cargo::commands::check::exec
+  12: <cargo::cli::Exec>::exec
+  13: cargo::main
+  14: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  15: std::rt::lang_start::<()>::{closure#0}
+  16: std::rt::lang_start_internal
+  17: _main
+   0.228629875s  INFO prepare_target{force=false package_id=pyra-accounts v0.2.11 (/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/crates/accounts) target="pda"}: cargo::core::compiler::fingerprint: fingerprint error for pyra-accounts v0.2.11 (/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/crates/accounts)/Check { test: true }/TargetInner { kind: "test", name: "pda", benched: false, ..: with_path("/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/crates/accounts/tests/pda.rs", Edition2021) }
+   0.228632917s  INFO prepare_target{force=false package_id=pyra-accounts v0.2.11 (/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/crates/accounts) target="pda"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/target/debug/.fingerprint/pyra-accounts-5e641216da42987c/test-integration-test-pda`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+   0.230759125s  INFO prepare_target{force=false package_id=pyra-instructions v0.2.11 (/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/crates/instructions) target="pyra_instructions"}: cargo::core::compiler::fingerprint: fingerprint error for pyra-instructions v0.2.11 (/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/crates/instructions)/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("pyra_instructions", ["lib"], "/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/crates/instructions/src/lib.rs", Edition2021) }
+   0.230766958s  INFO prepare_target{force=false package_id=pyra-instructions v0.2.11 (/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/crates/instructions) target="pyra_instructions"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/target/debug/.fingerprint/pyra-instructions-a25b78950c811cf6/lib-pyra_instructions`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+   0.232853000s  INFO prepare_target{force=false package_id=pyra-instructions v0.2.11 (/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/crates/instructions) target="pyra_instructions"}: cargo::core::compiler::fingerprint: fingerprint error for pyra-instructions v0.2.11 (/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/crates/instructions)/Check { test: true }/TargetInner { name_inferred: true, ..: lib_target("pyra_instructions", ["lib"], "/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/crates/instructions/src/lib.rs", Edition2021) }
+   0.232861083s  INFO prepare_target{force=false package_id=pyra-instructions v0.2.11 (/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/crates/instructions) target="pyra_instructions"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/target/debug/.fingerprint/pyra-instructions-558b6080b8bad697/test-lib-pyra_instructions`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+   0.233345625s  INFO prepare_target{force=false package_id=pyra-tokens v0.2.11 (/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/crates/tokens) target="pyra_tokens"}: cargo::core::compiler::fingerprint: fingerprint error for pyra-tokens v0.2.11 (/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/crates/tokens)/Check { test: true }/TargetInner { name_inferred: true, ..: lib_target("pyra_tokens", ["lib"], "/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/crates/tokens/src/lib.rs", Edition2021) }
+   0.233351167s  INFO prepare_target{force=false package_id=pyra-tokens v0.2.11 (/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/crates/tokens) target="pyra_tokens"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/target/debug/.fingerprint/pyra-tokens-134661a46d98e625/test-lib-pyra_tokens`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+    Checking pyra-tokens v0.2.11 (/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/crates/tokens)
+    Checking pyra-accounts v0.2.11 (/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/crates/accounts)
+    Checking pyra-instructions v0.2.11 (/Users/iarlacrewe/Code/pyra/workspaces/rust-instructions/rust-sdk/crates/instructions)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.13s

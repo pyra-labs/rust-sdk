@@ -1,0 +1,18 @@
+[package]
+name = "pyra-instructions"
+description = "Instruction builders for the Pyra protocol on Solana"
+readme = "README.md"
+version = { workspace = true }
+edition = { workspace = true }
+authors = { workspace = true }
+license = { workspace = true }
+repository = { workspace = true }
+keywords = { workspace = true }
+categories = { workspace = true }
+
+[dependencies]
+solana-program = { workspace = true }
+solana-pubkey = { workspace = true }
+anchor-lang = { workspace = true }
+pyra-accounts = { path = "../accounts" }
+pyra-tokens = { path = "../tokens" }
