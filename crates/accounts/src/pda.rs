@@ -1,6 +1,6 @@
 use solana_program::pubkey::Pubkey;
 
-use crate::{DRIFT_PROGRAM_ID, PYRA_PROGRAM_ID};
+use crate::{ASSOCIATED_TOKEN_PROGRAM_ID, DRIFT_PROGRAM_ID, PYRA_PROGRAM_ID};
 
 pub fn get_vault(owner: &Pubkey) -> Pubkey {
     let (pubkey, _) = Pubkey::find_program_address(&[b"vault", owner.as_ref()], &PYRA_PROGRAM_ID);
@@ -69,4 +69,22 @@ pub fn get_drift_spot_market(market_index: u16) -> Pubkey {
         &DRIFT_PROGRAM_ID,
     );
     pubkey
+}
+
+pub fn get_swap_ledger_v2(mint: &Pubkey) -> Pubkey {
+    let (pubkey, _) =
+        Pubkey::find_program_address(&[b"swap_ledger_v2", mint.as_ref()], &PYRA_PROGRAM_ID);
+    pubkey
+}
+
+pub fn get_associated_token_address(
+    wallet: &Pubkey,
+    mint: &Pubkey,
+    token_program: &Pubkey,
+) -> Pubkey {
+    let (address, _) = Pubkey::find_program_address(
+        &[wallet.as_ref(), token_program.as_ref(), mint.as_ref()],
+        &ASSOCIATED_TOKEN_PROGRAM_ID,
+    );
+    address
 }

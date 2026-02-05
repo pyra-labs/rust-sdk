@@ -1,6 +1,6 @@
 [package]
-name = "pyra-accounts"
-description = "Account definitions and PDA helpers for accounts on Pyra"
+name = "pyra-instructions"
+description = "Instruction builders for the Pyra protocol on Solana"
 readme = "README.md"
 version = { workspace = true }
 edition = { workspace = true }
@@ -13,6 +13,6 @@ categories = { workspace = true }
 [dependencies]
 solana-program = { workspace = true }
 solana-pubkey = { workspace = true }
-
-[dev-dependencies]
+anchor-lang = { workspace = true }
+pyra-accounts = { workspace = true }
 pyra-tokens = { workspace = true }

@@ -8,7 +8,7 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-pyra-tokens = "0.1.0"
+pyra-tokens = "0.2"
 ```
 
 ### Basic Usage
