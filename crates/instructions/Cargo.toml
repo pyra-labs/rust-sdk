@@ -14,5 +14,5 @@ categories = { workspace = true }
 solana-program = { workspace = true }
 solana-pubkey = { workspace = true }
 anchor-lang = { workspace = true }
-pyra-accounts = { path = "../accounts" }
-pyra-tokens = { path = "../tokens" }
+pyra-accounts = { workspace = true }
+pyra-tokens = { workspace = true }

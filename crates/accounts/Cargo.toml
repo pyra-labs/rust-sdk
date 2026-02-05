@@ -15,4 +15,4 @@ solana-program = { workspace = true }
 solana-pubkey = { workspace = true }
 
 [dev-dependencies]
-pyra-tokens = { path = "../tokens" }
+pyra-tokens = { workspace = true }
